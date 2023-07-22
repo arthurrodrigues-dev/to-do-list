@@ -1,6 +1,7 @@
 const input = document.querySelector('#input-task');
 const addTaskButton = document.querySelector('#add-task');
 const ul = document.querySelector('.list-container');
+const container = document.querySelector('.container');
 
 const addTask = () => {
     const textTask = input.value.trim();
@@ -27,3 +28,4 @@ input.addEventListener('keyup', (e) => {
     }
 })
 
+console.log(container.computedStyleMap)
