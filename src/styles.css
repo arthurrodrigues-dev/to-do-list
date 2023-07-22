@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'Open sans';
+}
+
+h1 {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.container {
+    border: 2px solid magenta;
+    width: 400px;
+    margin: 50px auto 0;
+    height: 250px;
+}
+
+.input-task {
+    text-align: center;
+}
+
+.input-task input {
+    width: 300px;
+    height: 50px;
+    border-radius: 1.75rem;
+    background-color: rgba(122, 122, 122, 0.186);
+    padding:10px;
+}
+
+.input-task input:focus {
+    outline: 1px solid rgba(0, 0, 0, 0.197);
+}
+
+.input-task button {
+    width: 50px;
+    height: 50px;
+    border-radius: 3rem;
+    background-color: #FFC32C;
+    cursor: pointer;
+}
+
+.list-container {
+    padding: 20px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url('../imgs/unchecked.png');
+    background-size: cover;
+    background-position: center;
+    top: 11px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url('../imgs/checked.png');
+}
